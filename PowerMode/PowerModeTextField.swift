@@ -13,7 +13,7 @@ public class PowerModeTextField: UITextField, UITextFieldDelegate {
     
     override public var delegate: UITextFieldDelegate? {
         didSet {
-            if delegate !== self {
+            if delegate != nil && delegate !== self {
                 fatalError("Please use pmTextFieldDelegate for delegate")
             }
         }

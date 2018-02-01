@@ -13,7 +13,7 @@ public class PowerModeTextView: UITextView, UITextViewDelegate {
     
     override public var delegate: UITextViewDelegate? {
         didSet {
-            if delegate !== self {
+            if delegate != nil && delegate !== self {
                 fatalError("Please use pmTextViewDelegate for delegate")
             }
         }
